@@ -32,7 +32,7 @@ def user_api(action, user):
 
 def main():
     print("Running webserver")
-    run(host=get_ip_address()``, port=8080, debug=True)
+    run(host=get_ip_address(), port=8080, debug=True)
 
 
 if __name__ == '__main__':
