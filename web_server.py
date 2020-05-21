@@ -1,7 +1,14 @@
 #!/usr/local/bin/python3
 import sys
+import socket
 from bottle import route, run
 from bottle import template
+
+
+def get_ip_address():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    return s.getsockname()[0]
 
 @route('/hello')
 def hello():
@@ -25,7 +32,7 @@ def user_api(action, user):
 
 def main():
     print("Running webserver")
-    run(host='localhost', port=8080, debug=True)
+    run(host=get_ip_address(), port=8080, debug=True)
 
 
 if __name__ == '__main__':
