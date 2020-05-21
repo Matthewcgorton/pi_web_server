@@ -23,16 +23,16 @@ def greet(name='Stranger'):
 
 @route('/test/<pagename>')            # matches /wiki/Learning_Python
 def show_wiki_page(pagename):
-    print(f"Pagename is {pagename}")
+    return template(f"Pagename is {pagename}")
 
 @route('/<action>/<user>')            # matches /follow/defnull
 def user_api(action, user):
-    print(f"Action: {action}, User: {user}")
+    return template(f"Action: {action}, User: {user}")
 
 
 def main():
     print("Running webserver")
-    run(host=get_ip_address(), port=8080, debug=True)
+    run(host=get_ip_address()``, port=8080, debug=True)
 
 
 if __name__ == '__main__':
