@@ -16,11 +16,11 @@ def greet(name='Stranger'):
 
 @route('/test/<pagename>')            # matches /wiki/Learning_Python
 def show_wiki_page(pagename):
-    print(f"Pagename is {pagename}"")
+    print(f"Pagename is {pagename}")
 
 @route('/<action>/<user>')            # matches /follow/defnull
 def user_api(action, user):
-    print(f"Action: {action}, User: {user}"")
+    print(f"Action: {action}, User: {user}")
 
 
 def main():
