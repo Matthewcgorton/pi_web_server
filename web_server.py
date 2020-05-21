@@ -23,11 +23,11 @@ def greet(name='Stranger'):
 
 @route('/test/<pagename>')            # matches /wiki/Learning_Python
 def show_wiki_page(pagename):
-    return template("Pagename is {pagename}", pagename=pagename)
+    return template("Pagename is {{pagename}}", pagename=pagename)
 
 @route('/<action>/<user>')            # matches /follow/defnull
 def user_api(action, user):
-    return template("Action: {action}, User: {user}", action=action, user=user)
+    return template("Action: {{action}}, User: {{user}}", action=action, user=user)
 
 
 def main():
