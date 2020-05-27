@@ -127,6 +127,8 @@ def lcd_set(line1="", line2="", line3="", line4="", backlight=None):
     if backlight is not None:
         lcd['backlight'] = backlight
 
+    print("Setting LCD")
+
     return lcd
 
 
@@ -254,7 +256,7 @@ def display_forum():
 def main():
     print("Initializing LCD")
     lcd_init()
-    lcd_set(line1="afsdf")
+    lcd_set(line1="starting web server")
 
     print("Running webserver")
     run(host=get_ip_address(), port=8080, debug=True, reloader=True)
