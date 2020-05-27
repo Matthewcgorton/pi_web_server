@@ -254,6 +254,7 @@ def display_forum():
 def main():
     print("Initializing LCD")
     lcd_init()
+    lcd_set(line1="afsdf")
 
     print("Running webserver")
     run(host=get_ip_address(), port=8080, debug=True, reloader=True)
